@@ -4,7 +4,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 public class QuizUtilsTest {
 
@@ -50,17 +50,17 @@ public class QuizUtilsTest {
 
         // number3ToConvert is a valid number
         expectedInteger = 1;
-        actualInteger = QuizUtils.convertToInt(number1ToConvert);
+        actualInteger = QuizUtils.convertToInt(number3ToConvert);
         assertEquals(expectedInteger, actualInteger);
 
         // number4ToConvert doesn't have null terminating character, so we expect Integer.MIN_VALUE
         expectedInteger = Integer.MIN_VALUE;
-        actualInteger = QuizUtils.convertToInt(number1ToConvert);
+        actualInteger = QuizUtils.convertToInt(number4ToConvert);
         assertEquals(expectedInteger, actualInteger);
 
         // number5ToConvert while a valid hexadecimal value, isn't a valid decimal value
         expectedInteger = -1;
-        actualInteger = QuizUtils.convertToInt(number1ToConvert);
+        actualInteger = QuizUtils.convertToInt(number5ToConvert);
         assertEquals(expectedInteger, actualInteger);
     }
 
