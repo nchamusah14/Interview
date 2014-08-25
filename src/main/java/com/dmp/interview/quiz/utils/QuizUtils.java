@@ -1,7 +1,7 @@
 package com.dmp.interview.quiz.utils;
 
 /**
- * @author jdaehn
+ * @author Norman Chamusah
  * @since 8/21/2014 1:33 PM
  */
 public class QuizUtils {
@@ -16,7 +16,11 @@ public class QuizUtils {
      * character, return {@code Integer.MIN_VALUE}. If the given input does not represent a long value, return -1.
      */
     public static int convertToInt(char[] stringInput) {
-        return 0;
+        if (stringInput[stringInput.length - 1] != '\0') {
+            return 0;
+        } else {
+            return Integer.MIN_VALUE;
+        }
     }
 
     /**
